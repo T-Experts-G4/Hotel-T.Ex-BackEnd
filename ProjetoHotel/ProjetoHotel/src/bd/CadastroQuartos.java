@@ -24,7 +24,7 @@ public class CadastroQuartos {
 			if (quarto.getNumero() == numero) {
 				return quarto;
 			}
-		}
-		return null;
+				
+		} return null;
 	}
 }

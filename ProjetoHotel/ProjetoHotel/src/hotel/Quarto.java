@@ -11,13 +11,9 @@ public class Quarto {
 		this.disponivel = true;
 	}
 
-	
-
 	public int getNumero() {
 		return numero;
 	}
-
-
 
 	public double getPrecoDiaria() {
 		return precoDiaria;
