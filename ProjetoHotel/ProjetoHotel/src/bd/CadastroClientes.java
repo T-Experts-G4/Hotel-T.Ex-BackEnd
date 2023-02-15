@@ -9,7 +9,12 @@ public class CadastroClientes {
 	  private List<Cliente> clientes;
 	  
 	  public List<Cliente> getClientes() {
-		return clientes;
+		  if (clientes.isEmpty() == false) {
+			  return clientes;
+		  } else {
+			  System.out.println("Não existem Clientes cadastrados");
+			  return clientes;
+		  }
 	}
 
 	public CadastroClientes() {
