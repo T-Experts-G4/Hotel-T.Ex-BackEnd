@@ -1,23 +1,15 @@
 package pessoas;
 
+import hotel.Endereco;
+
 public class Cliente extends Usuario {
-	private String endereco;
+
+	private Endereco endereco;
 	private String telefone;
 	private String email;
-
-	public Cliente(String nome, String senha, String endereco, String telefone, String email) {
+	
+	public Cliente(String nome, String senha) {
 		super(nome, senha);
-		this.endereco = endereco;
-		this.telefone = telefone;
-		this.email = email;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
 	}
 
 	public String getTelefone() {

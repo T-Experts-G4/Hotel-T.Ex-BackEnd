@@ -1,9 +1,12 @@
 package pessoas;
 
+import hotel.Hotel;
+
 public class Funcionario extends Usuario {
 	private int matricula;
 	private String cargo;
 	private String email;
+	private Hotel hotel;
 
 	public Funcionario(String nome, String senha, int matricula, String cargo, String email) {
 		super(nome, senha);
