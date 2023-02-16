@@ -28,8 +28,8 @@ public class ProjetoHotel {
 			System.out.println("9. Listar Reservas");
 			System.out.println("10. Listar Serviços Adicionais");
 			System.out.println("0. Sair");
-			System.out.println();
-			System.out.println();
+			System.out.println("\n");
+			System.out.println("Escolha uma opção");
 			int opcao = scan.nextInt();
 
 			switch (opcao) {
@@ -52,16 +52,16 @@ public class ProjetoHotel {
 				Cliente cliente = new Cliente(nome, senha, endereco, telefone, email);
 				sistemaHotel.getCadastroClientes().adicionarCliente(cliente);
 				System.out.println("Cliente cadastrado com sucesso!");
-				System.out.println();
+				break;
 			}
 			case 2: {
 				System.out.println("Digite o nome do funcionário:");
 				String nome = scan.next();
 
-				System.out.println("Digite o cargo do cliente:");
+				System.out.println("Digite o cargo do funcionário:");
 				String cargo = scan.next();
 
-				System.out.println("Digite o matricula do cliente:");
+				System.out.println("Digite o matricula do funcionário:");
 				int matricula = scan.nextInt();
 
 				System.out.println("Digite o email do funcionário:");
@@ -73,7 +73,7 @@ public class ProjetoHotel {
 				Funcionario funcionario = new Funcionario(nome, senha, matricula, cargo, email);
 				sistemaHotel.getCadastroFuncionarios().adicionarFuncionario(funcionario);
 				System.out.println("Funcionário cadastrado com sucesso!");
-				System.out.println();
+				break;
 
 			}
 			case 3: {
@@ -89,7 +89,7 @@ public class ProjetoHotel {
 				Quarto quarto = new Quarto(numero, precoDiaria);
 				sistemaHotel.getCadastroQuartos().adicionarQuarto(quarto);
 				System.out.println("Quarto cadastrado com sucesso!");
-				System.out.println();
+				break;
 			}
 			case 4: {
 				System.out.println("Digite o email do cliente:");
@@ -107,7 +107,7 @@ public class ProjetoHotel {
 				Reserva reserva = new Reserva(emailCliente, opcaoQuarto, dias);
 				sistemaHotel.getCadastroReservas().adicionarReserva(reserva);
 				System.out.println("Reserva efetuada com sucesso!");
-				System.out.println();
+				break;
 			}
 			case 5: {
 				System.out.println("Digite o nome do serviço adicional:");
@@ -119,14 +119,14 @@ public class ProjetoHotel {
 				ServicoAdicional servicoAdicional = new ServicoAdicional(nome, preco);
 				sistemaHotel.getCadastroServicosAdicionais().adicionarServicoAdicional(servicoAdicional);
 				System.out.println("Serviço adicional cadastrado com sucesso!");
-				System.out.println();
+				break;
 			}
 			case 6: {
 				System.out.println("Lista de Clientes:");
 				for (Cliente cliente : sistemaHotel.getCadastroClientes().getClientes()) {
 					System.out.println("Nome: " + cliente.getNome());
 					System.out.println("E-mail: " + cliente.getEmail());
-					System.out.println();
+					break;
 				}
 			}
 			case 7: {
@@ -134,7 +134,7 @@ public class ProjetoHotel {
 				for (Funcionario funcionario : sistemaHotel.getCadastroFuncionarios().getFuncionarios()) {
 					System.out.println("Nome: " + funcionario.getNome());
 					System.out.println("E-mail: " + funcionario.getEmail());
-					System.out.println();
+					break;
 				}
 			}
 			case 8: {
@@ -142,7 +142,7 @@ public class ProjetoHotel {
 				for (Quarto quarto : sistemaHotel.getCadastroQuartos().getQuartos()) {
 					System.out.println("Número: " + quarto.getNumero());
 					System.out.println("Preço: " + quarto.getPrecoDiaria());
-					System.out.println();
+					break;
 				}
 			}
 			case 9: {
@@ -155,7 +155,7 @@ public class ProjetoHotel {
 					 * System.out.println("Data de Fim: " + reserva.getDataFim());
 					 */
 					System.out.println(reserva.getQuarto());
-					System.out.println();
+					break;
 				}
 			}
 			case 10: {
@@ -164,7 +164,7 @@ public class ProjetoHotel {
 						.getServicosAdicionais()) {
 					System.out.println("Nome: " + servicoAdicional.getDescricao());
 					System.out.println("Preço: " + servicoAdicional.getPreco());
-					System.out.println();
+					break;
 				}
 			}
 			case 0: {
