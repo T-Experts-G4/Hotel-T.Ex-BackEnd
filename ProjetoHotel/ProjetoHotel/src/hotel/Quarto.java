@@ -1,6 +1,7 @@
 package hotel;
 
 public class Quarto {
+	private Hotel hotel;
 	private int numero;
 	private double precoDiaria;
 	private boolean disponivel;
