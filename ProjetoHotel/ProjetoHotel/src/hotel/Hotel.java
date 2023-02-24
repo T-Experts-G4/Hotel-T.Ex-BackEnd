@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import pessoas.Funcionario;
+import pessoas.Usuario;
 
 public class Hotel {
 	
@@ -12,7 +13,7 @@ public class Hotel {
 	private String nome;
 	private Endereco endereco;
 	private List<Quarto> quartos = new LinkedList<Quarto>();
-	private List<Funcionario> funcionarios = new LinkedList<Funcionario>();
+	private List<Usuario> funcionarios = new LinkedList<Usuario>();
 	
 	
 	public Hotel (int id, String nome, Endereco endereco) {
@@ -32,7 +33,6 @@ public class Hotel {
 		this.id = id;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
@@ -47,17 +47,28 @@ public class Hotel {
 		return Collections.unmodifiableList(quartos);
 	}
 	
+	public List<Usuario> getFuncionarios() {
+		return Collections.unmodifiableList(funcionarios);
+	}
+	
 	public void adicionaQuarto (Quarto quarto) {
 		this.quartos.add(quarto);
 	}
 	
-	public void adicionaFuncionario (Funcionario funcionario) {
+	public void adicionaFuncionario (Usuario funcionario) {
+		this.funcionarios.add(funcionario);
 		
 	}
+	
+	
+	
+	
 
 	@Override
 	public String toString() {
 		
-		return "Id: " + id + "\nNome : " + nome + "\nEndereco" + endereco.toString();
+		return  "Informações do Hotel" + "\nId: " + id + "\nNome : " + nome + "\nEndereco: " + endereco + 
+				"\nQuantidade de Quartos: " + quartos.size() + 
+				"\nQuantidade de Funcionários: " + funcionarios.size();
 	}
 }
