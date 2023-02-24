@@ -4,12 +4,15 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import pessoas.Funcionario;
+
 public class Hotel {
 	
 	private int id;
 	private String nome;
 	private Endereco endereco;
 	private List<Quarto> quartos = new LinkedList<Quarto>();
+	private List<Funcionario> funcionarios = new LinkedList<Funcionario>();
 	
 	
 	public Hotel (int id, String nome, Endereco endereco) {
@@ -44,8 +47,12 @@ public class Hotel {
 		return Collections.unmodifiableList(quartos);
 	}
 	
-	public void adiciona (Quarto quarto) {
+	public void adicionaQuarto (Quarto quarto) {
 		this.quartos.add(quarto);
+	}
+	
+	public void adicionaFuncionario (Funcionario funcionario) {
+		
 	}
 
 	@Override

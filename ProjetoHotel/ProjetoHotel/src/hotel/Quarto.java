@@ -30,4 +30,10 @@ public class Quarto {
 	public void setDisponivel(boolean disponivel) {
 		this.disponivel = disponivel;
 	}
+	
+	@Override
+	public String toString() {
+		
+		return "Quarto: " + numero + " Diaria: " + precoDiaria; 
+	}
 }
